@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.bdqn.game.pojo.Advice" table="ADVICE" schema="SCOTT">
+        <id name="adviceId">
+            <column name="ADVICE_ID" sql-type="number(4)" precision="4"/>
+        </id>
+        <property name="userId">
+            <column name="USER_ID" sql-type="number(*)" precision="2147483646" not-null="true"/>
+        </property>
+        <property name="content">
+            <column name="CONTENT" sql-type="varchar2(100)" length="100" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
